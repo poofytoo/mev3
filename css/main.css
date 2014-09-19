@@ -45,6 +45,81 @@ li a:hover {
   -webkit-transition: color 0.2s, border-color 0.2s;
 }
 
+li a.etc {
+  float: left;
+}
+
+li ul.icons {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+li ul.icons li {
+  display: inline-block;
+  font-weight: 100;
+  margin-top: 0;
+  margin-left: 2px;
+  transition: opacity 200ms ease;
+  -webkit-transition: opacity 200ms ease;
+  opacity: 0;
+}
+
+li ul.icons li a {
+  border: 0;
+  font-weight: 100;
+  color: #fefefe;
+  padding: 0;
+  width: 37px;
+  height: 37px;
+  line-height: 37px;
+  vertical-align: middle;
+  text-align: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+}
+
+li.etc:hover > ul.icons li {
+  opacity: 1;
+}
+
+li.etc:hover > ul.icons li:nth-child(1)  { transition-delay: 0    }
+li.etc:hover > ul.icons li:nth-child(2)  { transition-delay: 0.05s }
+li.etc:hover > ul.icons li:nth-child(3)  { transition-delay: 0.1s }
+li.etc:hover > ul.icons li:nth-child(4)  { transition-delay: 0.15s }
+li.etc:hover > ul.icons li:nth-child(5)  { transition-delay: 0.2s }
+
+li.etc > ul.icons li:nth-child(1)  { transition-delay: 0.2s    }
+li.etc > ul.icons li:nth-child(2)  { transition-delay: 0.15s }
+li.etc > ul.icons li:nth-child(3)  { transition-delay: 0.1s }
+li.etc > ul.icons li:nth-child(4)  { transition-delay: 0.05s }
+li.etc > ul.icons li:nth-child(5)  { transition-delay: 0 }
+
+li ul.icons li a:hover {
+  opacity: 1;
+}
+
+li ul.icons li a.flaticon-facebook {
+  background-color: #547BBD;
+}
+
+li ul.icons li a.flaticon-github {
+  background-color: #000;
+}
+
+li ul.icons li a.flaticon-email {
+  background-color: #aaa;
+}
+
+li ul.icons li a.flaticon-tumblr {
+  background-color: #5F90B0;
+}
+
+li ul.icons li a.flaticon-twitter {
+  background-color: #79CCF0;
+}
+
 .hello-there {
   background-color: #fefefe;
 }
