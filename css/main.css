@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+  position: relative;
 }
 
 body {
@@ -27,26 +28,54 @@ li {
 }
 
 li a {
-  color: #999;
+  color: #aaa;
+  border: 1px solid #aaa;
   display: inline-block; 
-  border: 1px solid #ccc;
-  padding: 9px 16px;
+  padding: 8px 17px;
   text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+  -webkit-transition: color 0.2s, border-color 0.2s;
 }
 
-.content {
-  padding: 150px 200px;
+li a:hover {
+  opacity: 1;
+  color: #000;
+  border: 1px solid #000;
+  transition: color 0.2s, border-color 0.2s;
+  -webkit-transition: color 0.2s, border-color 0.2s;
 }
 
 .hello-there {
+  background-color: #fefefe;
+}
+
+.hello-there .content {
+  padding: 0 200px;
+  position: relative;
+  top: calc(50% - 130px);
+  top: -webkit-calc(50% - 130px);
+}
+
+.my-projects {
+  background-color: #333;
+}
+
+.my-projects .content {
+  padding: 100px 100px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.section-chunk {
   height: 100%;
+  position: relative;
 }
 
 .me {
   width: 36px;
   height: 50px;
   position: absolute;
-  top: 150px;
+  top: 0px;
   left: 140px;
   background-size: 100%;
   background-repeat: no-repeat;
