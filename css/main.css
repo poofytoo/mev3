@@ -1,3 +1,54 @@
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Lato', sans-serif;
+  line-height: normal;
+}
+
+h1 {
+  font-family: 'Arvo', sans-serif;
+  letter-spacing: 10px;
+  font-size: 20px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+li {
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+li a {
+  color: #999;
+  display: inline-block; 
+  border: 1px solid #ccc;
+  padding: 9px 16px;
+  text-decoration: none;
+}
+
+.content {
+  padding: 150px 200px;
+}
+
+.hello-there {
+  height: 100%;
+}
+
+.me {
+  width: 36px;
+  height: 50px;
+  position: absolute;
+  top: 150px;
+  left: 140px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('images/me-img.png');
 }
