@@ -31,7 +31,6 @@ h3 {
 
 h4 {
   padding: 30px;
-  margin-bottom: 10px;
   font-size: 40px;
   color: #aaa;
   font-weight: 300; }
@@ -39,6 +38,14 @@ h4 {
 .outer-container {
   min-width: 670px;
   height: 100%; }
+
+a {
+  color: #ef6500;
+  transition: color 0.1s;
+  text-decoration: none; }
+  a:hover {
+    transition: color 0.1s;
+    color: #ffbd82; }
 
 li {
   font-weight: 300;
@@ -152,15 +159,98 @@ li ul.icons li a.flaticon-twitter {
   top: calc(50% - 130px);
   top: -webkit-calc(50% - 130px); }
 
+.my-hacks .content {
+  padding: 0px 30px;
+  color: #000;
+  font-weight: 300;
+  margin: 30px 0;
+  position: relative;
+  overflow: auto; }
+.my-hacks p {
+  line-height: normal;
+  margin-bottom: 20px; }
+.my-hacks ul {
+  margin-bottom: 20px; }
+  .my-hacks ul li {
+    margin: 0 0 10px 0;
+    padding: 10px; }
+    .my-hacks ul li .hack-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 3px; }
+    .my-hacks ul li .hack-more {
+      margin: 10px 0 6px; }
+      .my-hacks ul li .hack-more a {
+        border: 0px;
+        color: #ddd;
+        padding: 3px 6px 3px 8px;
+        font-size: 12px;
+        display: inline;
+        font-weight: 400; }
+        .my-hacks ul li .hack-more a:hover {
+          opacity: 0.8; }
+      .my-hacks ul li .hack-more a::before {
+        background-image: url("images/hacks-icons.png");
+        background-repeat: no-repeat;
+        background-size: 45px 15px;
+        width: 15px;
+        height: 15px;
+        top: 3px;
+        left: -4px;
+        position: relative;
+        display: inline-block;
+        content: ""; }
+      .my-hacks ul li .hack-more .github {
+        background-color: #000; }
+        .my-hacks ul li .hack-more .github::before {
+          background-position: -15px 0; }
+      .my-hacks ul li .hack-more .website {
+        background-color: #3e78b3; }
+        .my-hacks ul li .hack-more .website::before {
+          background-position: -30px 0; }
+      .my-hacks ul li .hack-more .node {
+        background-color: #98251f; }
+    .my-hacks ul li .special {
+      text-transform: uppercase;
+      font-size: 10px;
+      border: 1px solid #999;
+      color: #999;
+      padding: 2px 5px;
+      font-weight: 300;
+      position: relative;
+      top: -3px;
+      margin-left: 5px; }
+  .my-hacks ul li:hover {
+    background-color: #eee; }
+
 .my-projects {
   background-color: #fff; }
   .my-projects .content {
     padding: 0px 30px;
     color: #000;
     font-weight: 300;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative;
+    overflow: auto; }
   .my-projects .big-project {
-    margin-bottom: 50px; }
+    margin-bottom: 10px;
+    border-top: 1px solid #ddd;
+    padding: 30px 0; }
+  .my-projects .small-project {
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    width: calc(33% - 20px);
+    width: -webkit-calc(33% - 20px);
+    float: left;
+    vertical-align: top;
+    margin-right: 30px;
+    margin-bottom: 20px; }
+    .my-projects .small-project img {
+      width: 100%;
+      border: 1px solid #eee;
+      margin-top: 20px; }
+  .my-projects .small-project:nth-child(3n) {
+    margin-right: 0; }
   .my-projects .project-text {
     width: 500px;
     display: inline-block; }
@@ -169,12 +259,18 @@ li ul.icons li a.flaticon-twitter {
     margin-bottom: 10px; }
     .my-projects .project-title em {
       font-weight: 500; }
+  .my-projects .project-year, .my-projects .project-role {
+    font-size: 12px;
+    font-weight: 300; }
+  .my-projects .project-more {
+    margin-top: 6px;
+    font-size: 14px; }
   .my-projects .project-img {
     display: inline-block;
     float: right; }
   .my-projects .yext-locator {
     background-image: url("projects/yext-mobile-locator.png");
-    height: 266px;
+    height: 160px;
     background-repeat: no-repeat;
     background-size: 400px;
     display: inline-block;
@@ -199,6 +295,25 @@ li ul.icons li a.flaticon-twitter {
     .my-projects .yext-locator.yext-locator-6 {
       width: 80px;
       background-position: -330px 0; }
+  .my-projects .planes {
+    background-image: url("projects/planes.png");
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: 290px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 5px; }
+    .my-projects .planes.planes-1 {
+      width: 180px;
+      background-size: 290px; }
+    .my-projects .planes.planes-2 {
+      background-image: none;
+      width: 60px; }
+    .my-projects .planes.planes-3 {
+      width: 70px;
+      background-position: -200px 0;
+      margin-right: 40px; }
 
 .section-chunk {
   height: 100%;
@@ -215,17 +330,31 @@ li ul.icons li a.flaticon-twitter {
   background-image: url("images/me-img.png"); }
 
 @media (max-width: 1030px) {
-  .yext-locator-4 {
+  .yext-locator-4, .planes-2 {
     display: none !important; } }
 @media (max-width: 966px) {
   .yext-locator-1 {
     display: none !important; } }
+@media (max-width: 900px) {
+  .my-projects .small-project {
+    width: calc(50% - 20px) !important;
+    width: -webkit-calc(50% - 20px) !important;
+    margin-right: 30px !important; }
+
+  .small-project:nth-child(2n) {
+    margin-right: 0 !important; } }
 @media (max-width: 876px) {
-  .yext-locator-2 {
+  .yext-locator-2, .planes-3 {
     display: none !important; } }
 @media (max-width: 827px) {
   .yext-locator-6 {
-    display: none !important; } }
+    display: none !important; }
+
+  .planes-1 {
+    width: 110px !important;
+    top: 30px !important;
+    background-size: 160px !important;
+    background-position: 10px 0 !important; } }
 @media (max-width: 730px) {
   .yext-locator-3 {
     display: none !important; } }

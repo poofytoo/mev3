@@ -1,3 +1,6 @@
+$orange: #ef6500;
+$orange-lite: #ffbd82;
+
 html, body {
   height: 100%;
   position: relative;
@@ -36,7 +39,6 @@ h3 {
 
 h4 {
   padding: 30px;
-  margin-bottom: 10px;
   font-size: 40px;
   color: #aaa;
   font-weight: 300;
@@ -45,6 +47,17 @@ h4 {
 .outer-container {
   min-width: 670px;
   height: 100%;
+}
+
+a {
+  color: $orange;
+  transition: color 0.1s;
+  text-decoration: none;
+
+  &:hover {
+    transition: color 0.1s;
+    color: $orange-lite;
+  }
 }
 
 li {
@@ -157,6 +170,99 @@ li ul.icons li a.flaticon-twitter {
   top: -webkit-calc(50% - 130px);
 }
 
+.my-hacks {
+  .content {
+    padding: 0px 30px;
+    color: #000;
+    font-weight: 300;
+    margin: 30px 0;
+    position: relative;
+    overflow: auto;
+  }
+  p {
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  ul {
+    margin-bottom: 20px;
+
+    li {
+      margin: 0 0 10px 0;
+      padding: 10px;
+
+      .hack-title {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 3px;
+      }
+
+      .hack-more {
+        margin: 10px 0 6px;
+
+        a {
+          border: 0px;
+          color: #ddd;
+          padding: 3px 6px 3px 8px;
+          font-size: 12px;
+          display: inline;
+          font-weight: 400;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        a::before {
+          background-image: url('images/hacks-icons.png');
+          background-repeat: no-repeat;
+          background-size: 45px 15px;
+          width: 15px;
+          height: 15px;
+          top: 3px;
+          left: -4px;
+          position: relative;
+          display: inline-block;
+          content: "";
+        }
+
+        .github {
+          background-color: #000;
+          &::before {
+            background-position: -15px 0;
+          }
+        }
+
+        .website {
+          background-color: #3e78b3;
+          &::before {
+            background-position: -30px 0;
+          }
+        }
+
+        .node {
+          background-color: #98251f;
+        }
+      }
+
+      .special {
+        text-transform: uppercase;
+        font-size: 10px;
+        border: 1px solid #999;
+        color: #999;
+        padding: 2px 5px;
+        font-weight: 300;
+        position: relative;
+        top: -3px;
+        margin-left: 5px;
+      }
+    }
+
+    li:hover {
+      background-color: #eee;
+    }
+  }
+}
+
 .my-projects {
   background-color: #fff;
 
@@ -165,10 +271,35 @@ li ul.icons li a.flaticon-twitter {
     color: #000;
     font-weight: 300;
     margin-bottom: 30px;
+    position: relative;
+    overflow: auto;
   }
 
   .big-project {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    border-top: 1px solid #ddd;
+    padding: 30px 0;
+  }
+
+  .small-project {
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    width: calc(33% - 20px);
+    width: -webkit-calc(33% - 20px);
+    float: left;
+    vertical-align: top;
+    margin-right: 30px;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      border: 1px solid #eee;
+      margin-top: 20px;
+    }
+  }
+
+  .small-project:nth-child(3n){
+    margin-right: 0;
   }
 
   .project-text {
@@ -185,6 +316,16 @@ li ul.icons li a.flaticon-twitter {
     }
   }
 
+  .project-year, .project-role {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .project-more {
+    margin-top: 6px;
+    font-size: 14px;
+  }
+
   .project-img {
     display: inline-block;
     float: right;
@@ -192,7 +333,7 @@ li ul.icons li a.flaticon-twitter {
 
   .yext-locator {
     background-image: url('projects/yext-mobile-locator.png');
-    height: 266px;
+    height: 160px;
     background-repeat: no-repeat;
     background-size: 400px;
     display: inline-block;
@@ -231,6 +372,31 @@ li ul.icons li a.flaticon-twitter {
     }
   }
 
+  .planes {
+    background-image: url('projects/planes.png');
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: 290px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 5px;
+
+    &.planes-1 {
+      width: 180px;
+      background-size: 290px;
+    }
+    &.planes-2 {
+      background-image: none;
+      width: 60px;
+    }
+    &.planes-3 {
+      width: 70px;
+      background-position: -200px 0;
+      margin-right: 40px;
+    }
+  }
+
 }
 
 .section-chunk {
@@ -250,19 +416,32 @@ li ul.icons li a.flaticon-twitter {
 }
 
 @media (max-width: 1030px) {
-  .yext-locator-4 {
+  .yext-locator-4, .planes-2 {
     display: none !important;
   }
 }
 
 @media (max-width: 966px) {
-  .yext-locator-1 {
+  .yext-locator-1{
     display: none !important;
   }
 }
 
+@media (max-width: 900px) {
+  .my-projects .small-project {
+    width: calc(50% - 20px) !important;
+    width: -webkit-calc(50% - 20px) !important;
+    margin-right: 30px !important;
+
+  }
+
+  .small-project:nth-child(2n){
+    margin-right: 0 !important;
+  }
+}
+
 @media (max-width: 876px) {
-  .yext-locator-2 {
+  .yext-locator-2, .planes-3 {
     display: none !important;
   }
 }
@@ -270,6 +449,12 @@ li ul.icons li a.flaticon-twitter {
 @media (max-width: 827px) {
   .yext-locator-6 {
     display: none !important;
+  }
+  .planes-1 {
+    width: 110px !important;
+    top: 30px !important;
+    background-size: 160px !important;
+    background-position: 10px 0 !important;
   }
 }
 
